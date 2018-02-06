@@ -9,4 +9,8 @@ boss= ['1', '2']
 for employee in boss:
     
     # Grab the electiondata csv
-    paragraphtxt = os.path.join('employee_' + 'data_' + boss + '.csv')
+    employeecsv = os.path.join('employee_' + 'data_' + boss + '.csv')
+
+    with open(employeecsv,'r') as e:
+
+        for emp in e:
