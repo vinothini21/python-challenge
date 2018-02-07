@@ -45,6 +45,6 @@ for texting in paragraph:
     print ("Approximate Word count:  %i \nApproximate Sentences Count: %i \nAverage sentence length: %f \nAverage letter count: %f "\
     % (num_words, num_sents, avg_sents_len, avg_lett_count))
     
-    with open("Output.txt", "w") as text_file:
-        text_file.write("Approximate Word count:  %i \nApproximate Sentences Count: %i \nAverage sentence length: %f \nAverage letter count: %f "\
-        % (num_words, num_sents, avg_sents_len, avg_lett_count))
+with open("Output.txt", "w") as text_file:
+ text_file.write("Approximate Word count:  %i \nApproximate Sentences Count: %i \nAverage sentence length: %f \nAverage letter count: %f "\
+                % (num_words, num_sents, avg_sents_len, avg_lett_count))
