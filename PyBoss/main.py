@@ -1,6 +1,6 @@
 import os
 import csv
-
+import datetime
 # data sets
 boss = ['1', '2']
 
@@ -75,9 +75,6 @@ for employee in boss:
     State = []
     First_Name = []
     Last_Name = []
-   
-   
-
 
     with open(employeecsv, 'r') as csvFile:
 
@@ -92,18 +89,17 @@ for employee in boss:
             Emp_id.append(row[0])
 
             First_Name.append(str(row[1]).split()[0])
+            
             Last_Name.append(str(row[1]).split()[1])
             
-           
-            DOB.append(row[2])
+            DOB.append(datetime.datetime.strptime(row[2], '%Y-%m-%d').strftime('%m/%d/%Y'))
             
             SSN.append('***-**-'+(row[3].split('-')[2]))
            
-            
             State.append(state_abb[row[4]])
             
             
-        #     #Last_Name = row[1].split()
+        
         # #Zip lists together
         modifiedcsv = zip(Emp_id, First_Name, Last_Name, DOB, SSN, State)
     with open(newemployeeCSV, 'w') as csvFile:
